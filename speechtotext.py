@@ -5,7 +5,7 @@ recognizer = sr.Recognizer()
 while True:
     try:
         with sr.Microphone() as source:
-            recognizer.adjust_for_ambient_noise(source, duration=0.2)
+            recognizer.adjust_for_ambient_noise(source)
             print("Please Speak Now..")
             audio = recognizer.listen(source)
             text_in_audio = recognizer.recognize_google(audio)
